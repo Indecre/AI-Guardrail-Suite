@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  opa:
+    image: openpolicyagent/opa:latest
+    command: ["run", "--server", "--watch", "/policies"]
+    volumes:
+      - ./policy:/policies
+    ports:
+      - "8181:8181"
+
+  backend:
+    build: ./backend
+    env_file: ./.env
+    environment:
+      - OPA_URL=http://opa:8181
+      - OPA_PACKAGE=guardrails/aligncheck
+    ports:
+      - "8000:8000"
+    depends_on:
+      - opa
+
+  frontend:
+    build: ./frontend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
