@@ -452,6 +452,91 @@ textarea {
   background: rgba(255, 255, 255, 0.65);
 }
 
+.chart-card {
+  display: grid;
+  gap: 12px;
+}
+
+.chart-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.bar-list {
+  display: grid;
+  gap: 10px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 48px;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.bar-label {
+  color: var(--muted);
+}
+
+.bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(31, 26, 23, 0.08);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1a7f72, #0b3b6b);
+  border-radius: inherit;
+}
+
+.bar-fill.accent {
+  background: linear-gradient(90deg, #d5603d, #f1a266);
+}
+
+.bar-fill.warn {
+  background: linear-gradient(90deg, #f2b252, #d5603d);
+}
+
+.bar-value {
+  text-align: right;
+  color: var(--ink);
+}
+
+.trend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 12px;
+  align-items: end;
+  min-height: 120px;
+}
+
+.trend-item {
+  display: grid;
+  gap: 6px;
+  justify-items: center;
+}
+
+.trend-bar {
+  width: 100%;
+  max-width: 46px;
+  border-radius: 10px 10px 6px 6px;
+  background: linear-gradient(180deg, #1a7f72, #0b3b6b);
+  min-height: 12px;
+}
+
+.trend-bar.accent {
+  background: linear-gradient(180deg, #d5603d, #f1a266);
+}
+
+.trend-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+}
+
 .footer {
   margin-top: 64px;
   padding-top: 24px;
