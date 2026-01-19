@@ -39,9 +39,12 @@ Agents invoked from the backend:
 - RewriteAgent
 
 Tools via OnDemand plugins (configure IDs in env):
-- Web verify tool (`ONDEMAND_TOOL_WEB`)
-- Policy lookup tool (`ONDEMAND_TOOL_POLICY`)
-- Provenance tool (`ONDEMAND_TOOL_PROVENANCE`)
+- audit_logging_service
+- fairness_counterfactual_audit
+- policy_enforcer
+
+<img width="1710" height="988" alt="image" src="https://github.com/user-attachments/assets/730ab414-508c-4fbd-8a30-74aa8fc6f672" />
+
 
 ## Local Development
 
